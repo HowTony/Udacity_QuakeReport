@@ -8,11 +8,13 @@ public class Earthquake {
     private Double mMag;
     private String mLocation;
     private long mDateOfQuake;
+    private String mUrl;
 
-    public Earthquake(Double mag, String location, long date){
+    public Earthquake(Double mag, String location, long date, String url){
         mMag = mag;
         mLocation = location;
         mDateOfQuake = date;
+        mUrl = url;
     }
 
     public long getDateOfQuake() {
@@ -30,5 +32,9 @@ public class Earthquake {
     @Override
     public String toString() {
         return mMag.toString() + " " + mLocation + " " + mDateOfQuake;
+    }
+
+    public String getUrl() {
+        return mUrl;
     }
 }
